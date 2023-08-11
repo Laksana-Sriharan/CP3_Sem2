@@ -1,0 +1,278 @@
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ pwd
+/home/cscuser
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls
+2019sp059  Documents  memo.txt   myBackup.tgz  myDocs    snap       unixstuff
+cm         Downloads  Music      MyBkup        Pictures  Templates  Videos
+Desktop    etc        mybackups  Mydata        Public    tmt
+
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls -l
+total 411404
+-rw-rw-r-- 1 cscuser cscuser      3272 Jul 24 15:48 2019sp059
+drwxrwxr-x 3 cscuser cscuser      4096 Jul 24 15:24 cm
+drwxr-xr-x 2 cscuser cscuser      4096 Aug  7 16:14 Desktop
+drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Documents
+drwxr-xr-x 2 cscuser cscuser      4096 Feb 28 14:28 Downloads
+drwxrwxr-x 2 cscuser cscuser      4096 Jul 31 15:23 etc
+-rwxrwx--- 1 cscuser cscuser         0 Jul 31 13:51 memo.txt
+drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Music
+drwxrwxr-x 2 cscuser cscuser      4096 Jul 24 14:49 mybackups
+-rw-r--r-- 1 root    root    421201920 Aug  7 14:31 myBackup.tgz
+drwxrwxr-x 2 cscuser cscuser      4096 Jul 24 15:40 MyBkup
+drwxrwxr-x 2 cscuser cscuser      4096 Jul 24 14:09 Mydata
+drwxrwxr-x 2 cscuser cscuser      4096 Jul 24 14:34 myDocs
+drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Pictures
+drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Public
+drwx------ 5 cscuser cscuser      4096 Jul 31 14:45 snap
+drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Templates
+drwx------ 2 cscuser cscuser      4096 Jul 31 15:52 tmt
+drwxrwxr-x 3 cscuser cscuser      4096 Jul 24 15:46 unixstuff
+drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Videos
+
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls -lh
+total 402M
+-rw-rw-r-- 1 cscuser cscuser 3.2K Jul 24 15:48 2019sp059
+drwxrwxr-x 3 cscuser cscuser 4.0K Jul 24 15:24 cm
+drwxr-xr-x 2 cscuser cscuser 4.0K Aug  7 16:14 Desktop
+drwxr-xr-x 2 cscuser cscuser 4.0K Aug 11 09:28 Documents
+drwxr-xr-x 2 cscuser cscuser 4.0K Feb 28 14:28 Downloads
+drwxrwxr-x 2 cscuser cscuser 4.0K Jul 31 15:23 etc
+-rwxrwx--- 1 cscuser cscuser    0 Jul 31 13:51 memo.txt
+drwxr-xr-x 2 cscuser cscuser 4.0K Nov 24  2022 Music
+drwxrwxr-x 2 cscuser cscuser 4.0K Jul 24 14:49 mybackups
+-rw-r--r-- 1 root    root    402M Aug  7 14:31 myBackup.tgz
+drwxrwxr-x 2 cscuser cscuser 4.0K Jul 24 15:40 MyBkup
+drwxrwxr-x 2 cscuser cscuser 4.0K Jul 24 14:09 Mydata
+drwxrwxr-x 2 cscuser cscuser 4.0K Jul 24 14:34 myDocs
+drwxr-xr-x 2 cscuser cscuser 4.0K Nov 24  2022 Pictures
+drwxr-xr-x 2 cscuser cscuser 4.0K Nov 24  2022 Public
+drwx------ 5 cscuser cscuser 4.0K Jul 31 14:45 snap
+drwxr-xr-x 2 cscuser cscuser 4.0K Nov 24  2022 Templates
+drwx------ 2 cscuser cscuser 4.0K Jul 31 15:52 tmt
+drwxrwxr-x 3 cscuser cscuser 4.0K Jul 24 15:46 unixstuff
+drwxr-xr-x 2 cscuser cscuser 4.0K Nov 24  2022 Videos
+
+To get description about a command..............
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ man ls
+
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls --color
+2019sp059  Documents  memo.txt   myBackup.tgz  myDocs    snap       unixstuff
+cm         Downloads  Music      MyBkup        Pictures  Templates  Videos
+Desktop    etc        mybackups  Mydata        Public    tmt
+
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls 
+2019sp059  Documents  memo.txt   myBackup.tgz  myDocs    snap       unixstuff
+cm         Downloads  Music      MyBkup        Pictures  Templates  Videos
+Desktop    etc        mybackups  Mydata        Public    tmt
+
+To list in reverse order..............................
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls -r
+Videos     Templates  Pictures  MyBkup        Music     Downloads  cm
+unixstuff  snap       myDocs    myBackup.tgz  memo.txt  Documents  2019sp059
+tmt        Public     Mydata    mybackups     etc       Desktop
+
+Same as bove command..............................
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls --reverse
+Videos     Templates  Pictures  MyBkup        Music     Downloads  cm
+unixstuff  snap       myDocs    myBackup.tgz  memo.txt  Documents  2019sp059
+tmt        Public     Mydata    mybackups     etc       Desktop
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls -lt
+total 411404
+drwxr-xr-x 2 cscuser cscuser      4096 Aug 11 09:35 Documents
+drwxr-xr-x 2 cscuser cscuser      4096 Aug  7 16:14 Desktop
+-rw-r--r-- 1 root    root    421201920 Aug  7 14:31 myBackup.tgz
+drwx------ 2 cscuser cscuser      4096 Jul 31 15:52 tmt
+drwxrwxr-x 2 cscuser cscuser      4096 Jul 31 15:23 etc
+drwx------ 5 cscuser cscuser      4096 Jul 31 14:45 snap
+-rwxrwx--- 1 cscuser cscuser         0 Jul 31 13:51 memo.txt
+-rw-rw-r-- 1 cscuser cscuser      3272 Jul 24 15:48 2019sp059
+drwxrwxr-x 3 cscuser cscuser      4096 Jul 24 15:46 unixstuff
+drwxrwxr-x 2 cscuser cscuser      4096 Jul 24 15:40 MyBkup
+drwxrwxr-x 3 cscuser cscuser      4096 Jul 24 15:24 cm
+drwxrwxr-x 2 cscuser cscuser      4096 Jul 24 14:49 mybackups
+drwxrwxr-x 2 cscuser cscuser      4096 Jul 24 14:34 myDocs
+drwxrwxr-x 2 cscuser cscuser      4096 Jul 24 14:09 Mydata
+drwxr-xr-x 2 cscuser cscuser      4096 Feb 28 14:28 Downloads
+drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Music
+drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Pictures
+drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Public
+drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Templates
+drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Videos
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls -ls
+total 411404
+     4 -rw-rw-r-- 1 cscuser cscuser      3272 Jul 24 15:48 2019sp059
+     4 drwxrwxr-x 3 cscuser cscuser      4096 Jul 24 15:24 cm
+     4 drwxr-xr-x 2 cscuser cscuser      4096 Aug  7 16:14 Desktop
+     4 drwxr-xr-x 2 cscuser cscuser      4096 Aug 11 09:35 Documents
+     4 drwxr-xr-x 2 cscuser cscuser      4096 Feb 28 14:28 Downloads
+     4 drwxrwxr-x 2 cscuser cscuser      4096 Jul 31 15:23 etc
+     0 -rwxrwx--- 1 cscuser cscuser         0 Jul 31 13:51 memo.txt
+     4 drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Music
+     4 drwxrwxr-x 2 cscuser cscuser      4096 Jul 24 14:49 mybackups
+411332 -rw-r--r-- 1 root    root    421201920 Aug  7 14:31 myBackup.tgz
+     4 drwxrwxr-x 2 cscuser cscuser      4096 Jul 24 15:40 MyBkup
+     4 drwxrwxr-x 2 cscuser cscuser      4096 Jul 24 14:09 Mydata
+     4 drwxrwxr-x 2 cscuser cscuser      4096 Jul 24 14:34 myDocs
+     4 drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Pictures
+     4 drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Public
+     4 drwx------ 5 cscuser cscuser      4096 Jul 31 14:45 snap
+     4 drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Templates
+     4 drwx------ 2 cscuser cscuser      4096 Jul 31 15:52 tmt
+     4 drwxrwxr-x 3 cscuser cscuser      4096 Jul 24 15:46 unixstuff
+     4 drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Videos
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls -lrs
+total 411404
+     4 drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Videos
+     4 drwxrwxr-x 3 cscuser cscuser      4096 Jul 24 15:46 unixstuff
+     4 drwx------ 2 cscuser cscuser      4096 Jul 31 15:52 tmt
+     4 drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Templates
+     4 drwx------ 5 cscuser cscuser      4096 Jul 31 14:45 snap
+     4 drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Public
+     4 drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Pictures
+     4 drwxrwxr-x 2 cscuser cscuser      4096 Jul 24 14:34 myDocs
+     4 drwxrwxr-x 2 cscuser cscuser      4096 Jul 24 14:09 Mydata
+     4 drwxrwxr-x 2 cscuser cscuser      4096 Jul 24 15:40 MyBkup
+411332 -rw-r--r-- 1 root    root    421201920 Aug  7 14:31 myBackup.tgz
+     4 drwxrwxr-x 2 cscuser cscuser      4096 Jul 24 14:49 mybackups
+     4 drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Music
+     0 -rwxrwx--- 1 cscuser cscuser         0 Jul 31 13:51 memo.txt
+     4 drwxrwxr-x 2 cscuser cscuser      4096 Jul 31 15:23 etc
+     4 drwxr-xr-x 2 cscuser cscuser      4096 Feb 28 14:28 Downloads
+     4 drwxr-xr-x 2 cscuser cscuser      4096 Aug 11 09:35 Documents
+     4 drwxr-xr-x 2 cscuser cscuser      4096 Aug  7 16:14 Desktop
+     4 drwxrwxr-x 3 cscuser cscuser      4096 Jul 24 15:24 cm
+     4 -rw-rw-r-- 1 cscuser cscuser      3272 Jul 24 15:48 2019sp059
+     
+     
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls -lrt
+total 411404
+drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Videos
+drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Templates
+drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Public
+drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Pictures
+drwxr-xr-x 2 cscuser cscuser      4096 Nov 24  2022 Music
+drwxr-xr-x 2 cscuser cscuser      4096 Feb 28 14:28 Downloads
+drwxrwxr-x 2 cscuser cscuser      4096 Jul 24 14:09 Mydata
+drwxrwxr-x 2 cscuser cscuser      4096 Jul 24 14:34 myDocs
+drwxrwxr-x 2 cscuser cscuser      4096 Jul 24 14:49 mybackups
+drwxrwxr-x 3 cscuser cscuser      4096 Jul 24 15:24 cm
+drwxrwxr-x 2 cscuser cscuser      4096 Jul 24 15:40 MyBkup
+drwxrwxr-x 3 cscuser cscuser      4096 Jul 24 15:46 unixstuff
+-rw-rw-r-- 1 cscuser cscuser      3272 Jul 24 15:48 2019sp059
+-rwxrwx--- 1 cscuser cscuser         0 Jul 31 13:51 memo.txt
+drwx------ 5 cscuser cscuser      4096 Jul 31 14:45 snap
+drwxrwxr-x 2 cscuser cscuser      4096 Jul 31 15:23 etc
+drwx------ 2 cscuser cscuser      4096 Jul 31 15:52 tmt
+-rw-r--r-- 1 root    root    421201920 Aug  7 14:31 myBackup.tgz
+drwxr-xr-x 2 cscuser cscuser      4096 Aug  7 16:14 Desktop
+drwxr-xr-x 2 cscuser cscuser      4096 Aug 11 09:35 Documents
+
+ls-a lists all the configuration paths also......................
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls -a
+.              .config    memo.txt      .packettracer              Templates
+..             Desktop    .mozilla      Pictures                   .thunderbird
+2019sp059      Documents  Music         .pki                       tmt
+.bash_history  Downloads  mybackups     .profile                   unixstuff
+.bash_logout   etc        myBackup.tgz  Public                     Videos
+.bashrc        .gnupg     MyBkup        snap                       .vim
+.cache         .lesshst   Mydata        .ssh                       .viminfo
+cm             .local     myDocs        .sudo_as_admin_successful
+
+Directory names are case-sensitive................................
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ mkdir MyFolder
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls
+2019sp059  Documents  memo.txt   myBackup.tgz  myDocs    Public     tmt
+cm         Downloads  Music      MyBkup        MyFolder  snap       unixstuff
+Desktop    etc        mybackups  Mydata        Pictures  Templates  Videos
+
+To change the path.......................................
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ cd MyFolder
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~/MyFolder$ ls
+
+specify the current path...............
+cscuser@cscuser-HP-Desktop-Pro-G3:~/MyFolder$ pwd
+/home/cscuser/MyFolder
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~/MyFolder$ cd ~
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ pwd
+/home/cscuser
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ cd ..
+cscuser@cscuser-HP-Desktop-Pro-G3:/home$ ls
+cscuser
+
+
+c with tab key gives all commands starting with c
+
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~/MyFolder$ cd ~
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ pwd
+/home/cscuser
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ cd ..
+cscuser@cscuser-HP-Desktop-Pro-G3:/home$ ls
+cscuser
+
+to exit vim editor type sc + : + w+ q
+
+
+To copy a file from one folder to another
+------------------------------------------------------
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ cp MyFolder/firstFile.txt MyFolder2
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls MyFolder2
+firstFile.txt
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ cp MyFolder/secondFile.txt MyFolder2
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls MyFolder2
+firstFile.txt  secondFile.txt
+
+
+To move a file rom one folder to another
+----------------------------------------------------
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ mv MyFolder/secondFile.txt MyFolder2
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls Myfolder
+ls: cannot access 'Myfolder': No such file or directory
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls MyFolder
+firstFile.txt
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls MyFolder2
+firstFile.txt  secondFile.txt
+
+
+chande mode command to change access permission
+---------------------------------------------
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~/MyFolder2$ ls -l
+total 8
+-rw-rw-r-- 1 cscuser cscuser 11 Aug 11 10:24 firstFile.txt
+-rw-rw-r-- 1 cscuser cscuser 24 Aug 11 10:16 secondFile.txt
+
+chmod command ......................................................................
+cscuser@cscuser-HP-Desktop-Pro-G3:~/MyFolder2$ chmod 775 firstFile.txt
+cscuser@cscuser-HP-Desktop-Pro-G3:~/MyFolder2$ ls -l
+total 8
+-rwxrwxr-x 1 cscuser cscuser 11 Aug 11 10:24 firstFile.txt
+-rw-rw-r-- 1 cscuser cscuser 24 Aug 11 10:16 secondFile.txt
+
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~/MyFolder2$ chmod 777 firstFile.txt
+cscuser@cscuser-HP-Desktop-Pro-G3:~/MyFolder2$ ls -l
+total 8
+-rwxrwxrwx 1 cscuser cscuser 11 Aug 11 10:24 firstFile.txt
+-rw-rw-r-- 1 cscuser cscuser 24 Aug 11 10:16 secondFile.txt
+
+
+
+
+
+

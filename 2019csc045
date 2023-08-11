@@ -1,0 +1,109 @@
+						LabEx1
+					------------------------
+
+1.
+
+Create MyFolder.............
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ mkdir MyFolder
+
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ cd MyFolder
+cscuser@cscuser-HP-Desktop-Pro-G3:~/MyFolder$ pwd
+/home/cscuser/MyFolder
+
+Create a file................
+cscuser@cscuser-HP-Desktop-Pro-G3:~/MyFolder$ vim firstFile.txt
+
+Create MyFolder2.............
+cscuser@cscuser-HP-Desktop-Pro-G3:~/MyFolder$ cd
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ pwd
+/home/cscuser
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ mkdir MyFolder2
+
+
+Execute a copy command.................
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ cp MyFolder/firstFile.txt MyFolder2
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls MyFolder2
+firstFile.txt
+
+------------------------------------------------------------------------------------------------------------------------
+
+2.
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ mkdir myDocs
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls
+2019sp059  Downloads  mybackups     myDocs     Public     unixstuff
+cm         etc        myBackup.tgz  MyFolder   snap       Videos
+Desktop    memo.txt   MyBkup        MyFolder2  Templates
+Documents  Music      Mydata        Pictures   tmt
+
+-------------------------------------------------------------------------------------------------------------------------
+3.
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ cd myDocs
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~/myDocs$ vim copy.txt
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~/myDocs$ ls
+copy.txt
+
+------------------------------------------------------------------------------------------------------------------------
+4.
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~/myDocs$ ls
+copy.txt
+
+Move file copy.txt to the name copy2.txt.......................
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~/myDocs$ mv copy.txt copy2.txt
+
+Verifying using ls command.........................
+cscuser@cscuser-HP-Desktop-Pro-G3:~/myDocs$ ls
+copy2.txt
+
+--------------------------------------------------------------------------------------------------------------------------
+
+5.
+
+Creating a new directory 'mybackups'.............
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ mkdir mybackups
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls
+2019sp059  Downloads  mybackups     myDocs     Public     unixstuff
+cm         etc        myBackup.tgz  MyFolder   snap       Videos
+Desktop    memo.txt   MyBkup        MyFolder2  Templates
+Documents  Music      Mydata        Pictures   tmt
+
+---------------------------------------------------------------------------------------------------------------------------
+
+6.
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ cp myDocs/copy2.txt mybackups
+---------------------------------------------------------------------------------------------------------------------------
+
+7.
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls mybackups
+copy2.txt
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+8.
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ cd myDocs
+cscuser@cscuser-HP-Desktop-Pro-G3:~/myDocs$ ls
+copy2.txt
+
+Removing copy2.txt in myDocs folder................
+cscuser@cscuser-HP-Desktop-Pro-G3:~/myDocs$ rm copy2.txt
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~/myDocs$ ls
+
+
+
+
+
+
