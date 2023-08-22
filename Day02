@@ -1,0 +1,84 @@
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ sudo apt-get install xterm
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ xterm &
+[1] 16210
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ jobs
+[1]+  Running                 xterm &
+
+//To kill the process
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ kill 16210  
+
+
+PID - Process ID
+PPID - Parent Process ID
+STIME - start time
+
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ps
+    PID TTY          TIME CMD
+   3376 pts/0    00:00:00 bash
+  16345 pts/0    00:00:00 ps
+[1]+  Exit 15                 xterm
+
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ps -af
+UID          PID    PPID  C STIME TTY          TIME CMD
+cscuser     1544    1541  0 15:03 tty2     00:00:00 /usr/libexec/gnome-session-b
+cscuser    16361    3376  0 15:32 pts/0    00:00:00 ps -af
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ps -ef
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ps -ef | grep root
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ps --help
+
+Usage:
+ ps [options]
+
+ Try 'ps --help <simple|list|output|threads|misc|all>'
+  or 'ps --help <s|l|o|t|m|a>'
+ for additional help text.
+
+For more details see ps(1).
+
+// manual Ps
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ man ps
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ top
+
+top - 15:45:40 up 44 min,  1 user,  load average: 0.16, 0.22, 0.20
+Tasks: 255 total,   1 running, 254 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni, 99.9 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   7787.5 total,   2534.4 free,   1569.4 used,   3683.7 buff/cache
+MiB Swap:   7813.0 total,   7813.0 free,      0.0 used.   5348.5 avail Mem 
+
+   PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND           
+   1646 cscuser   20   0 5438556 262220 126484 S   0.7   3.3   0:31.93 gnome-shell       
+    571 systemd+  20   0   14824   6912   6144 S   0.3   0.1   0:01.39 systemd-oomd      
+  16497 cscuser   20   0   21908   4224   3456 R   0.3   0.1   0:00.26 top               
+      1 root      20   0  168356  13156   8164 S   0.0   0.2   0:02.17 systemd           
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd          
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp            
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par_gp        
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_flushwq      
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns             
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-eve+ 
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq      
+     11 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_kthread 
+     12 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_rude_k+ 
+     13 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_trace_+ 
+     14 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0       
+     15 root      20   0       0      0      0 I   0.0   0.0   0:00.69 rcu_preempt       
+     16 root      rt   0       0      0      0 S   0.0   0.0   0:00.00 migration/0       
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ uptime
+ 15:45:47 up 44 min,  1 user,  load average: 0.14, 0.22, 0.20
+
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ sudo vi /etc/crontab
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ sudo mkdir /tmp/backup
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ sudo tar -czvf /tmp/mybackup/mydata.tgz /home/cscuser/
+
+cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls -l /tmp/mybackup
+total 903776
+-rw-r--r-- 1 root root 925459400 Aug 22 16:24 mydata.tgz
+ 
+
