@@ -1,109 +1,156 @@
-						LabEx1
-					------------------------
+
+				Lab Assignment - 2019/CSC/045
+----------------------------------------------------------------------------------------------------------------------
+
 
 1.
 
-Create MyFolder.............
-cscuser@cscuser-HP-Desktop-Pro-G3:~$ mkdir MyFolder
+cscuser@cscuser:~$ mkdir documents
 
+Verifying using ls command…………………………
 
-cscuser@cscuser-HP-Desktop-Pro-G3:~$ cd MyFolder
-cscuser@cscuser-HP-Desktop-Pro-G3:~/MyFolder$ pwd
-/home/cscuser/MyFolder
+cscuser@cscuser:~$ ls
 
-Create a file................
-cscuser@cscuser-HP-Desktop-Pro-G3:~/MyFolder$ vim firstFile.txt
+2019sp070.txt  Documents      memo2.txt  mybackups     myDocs     Public           snap       txt.txt
+data.txt       Downloads      memo.txt   mybackup.tgz  myfolder1  rrr              task3      unixstuff
+Desktop        firstfile.txt  Music      mydata        myfolder2  secoundfile.txt  temp       Videos
+documents      hello.txt      mybackup   mydocs        Pictures   server.key       Templates
 
-Create MyFolder2.............
-cscuser@cscuser-HP-Desktop-Pro-G3:~/MyFolder$ cd
-cscuser@cscuser-HP-Desktop-Pro-G3:~$ pwd
-/home/cscuser
-
-cscuser@cscuser-HP-Desktop-Pro-G3:~$ mkdir MyFolder2
-
-
-Execute a copy command.................
-cscuser@cscuser-HP-Desktop-Pro-G3:~$ cp MyFolder/firstFile.txt MyFolder2
-
-cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls MyFolder2
-firstFile.txt
-
-------------------------------------------------------------------------------------------------------------------------
-
+-------------------------------------------------------------------------------------------------------------------------------------
 2.
 
-cscuser@cscuser-HP-Desktop-Pro-G3:~$ mkdir myDocs
+cscuser@cscuser:~$ cp /etc/resolv.conf  documents
 
-cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls
-2019sp059  Downloads  mybackups     myDocs     Public     unixstuff
-cm         etc        myBackup.tgz  MyFolder   snap       Videos
-Desktop    memo.txt   MyBkup        MyFolder2  Templates
-Documents  Music      Mydata        Pictures   tmt
+Verifying using ls command…………………………
 
--------------------------------------------------------------------------------------------------------------------------
+cscuser@cscuser:~$ cd documents
+cscuser@cscuser:~/documents$ ls
+resolv.conf
+-------------------------------------------------------------------------------------------------------------------------------------
+
 3.
 
-cscuser@cscuser-HP-Desktop-Pro-G3:~$ cd myDocs
+cscuser@cscuser:~$ mv documents mydocuments
 
-cscuser@cscuser-HP-Desktop-Pro-G3:~/myDocs$ vim copy.txt
+Verifying using ls command…………………………
 
-cscuser@cscuser-HP-Desktop-Pro-G3:~/myDocs$ ls
-copy.txt
+cscuser@cscuser:~$ ls
+2019sp070.txt  Downloads      memo.txt   mybackup.tgz  mydocuments  Public           snap       txt.txt
+data.txt       firstfile.txt  Music      mydata        myfolder1    rrr              task3      unixstuff
+Desktop        hello.txt      mybackup   mydocs        myfolder2    secoundfile.txt  temp       Videos
+Documents      memo2.txt      mybackups  myDocs        Pictures     server.key       Templates
 
-------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
+
 4.
-
-cscuser@cscuser-HP-Desktop-Pro-G3:~/myDocs$ ls
-copy.txt
-
-Move file copy.txt to the name copy2.txt.......................
-
-cscuser@cscuser-HP-Desktop-Pro-G3:~/myDocs$ mv copy.txt copy2.txt
-
-Verifying using ls command.........................
-cscuser@cscuser-HP-Desktop-Pro-G3:~/myDocs$ ls
-copy2.txt
-
---------------------------------------------------------------------------------------------------------------------------
+cscuser@cscuser:~/mydocuments$ ls -l
+total 4
+-rw-r--r-- 1 cscuser cscuser 945 Aug 25 11:25 resolv.conf
+drwxrwxr-x 2 cscuser cscuser      4096 Aug 25 11:25 mydocuments
+---------------------------------------------------------------------------------------------------------------------------------
 
 5.
 
-Creating a new directory 'mybackups'.............
-cscuser@cscuser-HP-Desktop-Pro-G3:~$ mkdir mybackups
+cscuser@cscuser:~$ chmod +777 mydocuments
 
-cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls
-2019sp059  Downloads  mybackups     myDocs     Public     unixstuff
-cm         etc        myBackup.tgz  MyFolder   snap       Videos
-Desktop    memo.txt   MyBkup        MyFolder2  Templates
-Documents  Music      Mydata        Pictures   tmt
+cscuser@cscuser:~$ ls -l
+drwxrwxrwx 2 cscuser cscuser      4096 Aug 25 11:25 mydocuments
 
----------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
 
 6.
 
-cscuser@cscuser-HP-Desktop-Pro-G3:~$ cp myDocs/copy2.txt mybackups
----------------------------------------------------------------------------------------------------------------------------
+scuser@cscuser:~$ sudo groupadd --gid 700 admins
+[sudo] password for cscuser: 
+cscuser@cscuser:~$ sudo groupadd --gid 701 powerusers
+
+cscuser@cscuser:~$ vi /etc/group
+admins:x:700:
+powerusers:x:701:
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
 
 7.
+cscuser@cscuser:~$ sudo useradd -c "Website Administrator" -g 700 -s /bin/bash -u 800 webadmin
 
-cscuser@cscuser-HP-Desktop-Pro-G3:~$ ls mybackups
-copy2.txt
+cscuser@cscuser:~$ sudo passwd webadmin
 
------------------------------------------------------------------------------------------------------------------------------
+New password: 
+BAD PASSWORD: The password contains the user name in some form
+Retype new password: 
+passwd: password updated successfully
+
+
+Verifying…………………………….
+
+cscuser@cscuser:~$ sudo vi /etc/shadow
+
+webadmin:$y$j9T$WNE6YS7FvwF7takuB/4990$OCkZWxRVSObUo3hMDXYKU4NYq5dUVZ.lBNFawjR5k/B:19594:0:99999:7:::
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 8.
 
-cscuser@cscuser-HP-Desktop-Pro-G3:~$ cd myDocs
-cscuser@cscuser-HP-Desktop-Pro-G3:~/myDocs$ ls
-copy2.txt
+cscuser@cscuser:~$ ifconfig
+enp1s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.20.70.126  netmask 255.255.255.0  broadcast 10.20.70.255
+        inet6 fe80::50c7:646:3bb0:e6ee  prefixlen 64  scopeid 0x20<link>
+        ether 80:e8:2c:d3:dc:e3  txqueuelen 1000  (Ethernet)
+        RX packets 198655  bytes 256028750 (256.0 MB)
+        RX errors 0  dropped 518  overruns 0  frame 0
+        TX packets 44930  bytes 4855254 (4.8 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
-Removing copy2.txt in myDocs folder................
-cscuser@cscuser-HP-Desktop-Pro-G3:~/myDocs$ rm copy2.txt
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 53518  bytes 124191505 (124.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 53518  bytes 124191505 (124.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
-cscuser@cscuser-HP-Desktop-Pro-G3:~/myDocs$ ls
+cscuser@cscuser:~$ ifconfig enp1s0
+enp1s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.20.70.126  netmask 255.255.255.0  broadcast 10.20.70.255
+        inet6 fe80::50c7:646:3bb0:e6ee  prefixlen 64  scopeid 0x20<link>
+        ether 80:e8:2c:d3:dc:e3  txqueuelen 1000  (Ethernet)
+        RX packets 198679  bytes 256030958 (256.0 MB)
+        RX errors 0  dropped 520  overruns 0  frame 0
+        TX packets 44930  bytes 4855254 (4.8 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
 
 
+--------------------------------------------------------------------------------------------------------------------------------------
+
+9.
 
 
+cscuser@cscuser:~$ sudo apt-get install apache2
 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Suggested packages:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom www-browser
+The following NEW packages will be installed
+  apache2
+0 to upgrade, 1 to newly install, 0 to remove and 266 not to upgrade.
+Need to get 0 B/97.8 kB of archives.
+After this operation, 546 kB of additional disk space will be used.
+Selecting previously unselected package apache2.
+(Reading database ... 206180 files and directories currently installed.)
+Preparing to unpack .../apache2_2.4.52-1ubuntu4.6_amd64.deb ...
+Unpacking apache2 (2.4.52-1ubuntu4.6) ...
+Setting up apache2 (2.4.52-1ubuntu4.6) ...
+apache-htcacheclean.service is a disabled or a static unit not running, not starting it.
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for ufw (0.36.1-4build1) .
